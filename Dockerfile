@@ -28,7 +28,11 @@ RUN apk update && \
     curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/installer.sh && \
     sh ~/installer.sh ~/.cache/dein && \
     yarn global add neovim && \
-    nvim; exit 0
+    nvim; \apk --update add tzdata && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    apk del tzdata && \
+    rm -rf /var/cache/apk/* ;\
+    exit 0;
 
 
 WORKDIR /usr/src/nvim
