@@ -119,9 +119,10 @@
         \ neosnippet#expandable_or_jumpable() ?
         \ neosnippet#mappings#expand_or_jump_impl() : "\<tab>"
   '''
-[[plugins]]
-  repo = 'Shougo/deoplete-lsp'
-  depends = ['Shougo/deoplete']
+
+#[[plugins]]
+#  repo = 'Shougo/deoplete-lsp'
+#  depends = ['Shougo/deoplete']
 
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
