@@ -327,14 +327,6 @@ hook_add = '''
   let g:gitgutter_map_keys = 0
   '''
 
-[[plugins]]
-  repo = 'rhysd/accelerated-jk'
-  hook_add = '''
-    "" j/kによる移動を速くする
-    nmap j <Plug>(accelerated_jk_gj)
-    nmap k <Plug>(accelerated_jk_gk)
-  '''
-
 # カーソル行からファイルタイプを推定するプラグイン
 [[plugins]]
   repo = 'Shougo/context_filetype.vim'
