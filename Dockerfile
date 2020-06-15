@@ -19,6 +19,7 @@ RUN apk update && \
     python3-dev \
     ruby-dev \
     make \
+    tzdata \
     py3-pip && \
     rm -rf /var/cache/apk/* && \
     pip3 install --upgrade pip neovim python-language-server && \
@@ -28,7 +29,7 @@ RUN apk update && \
     curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/installer.sh && \
     sh ~/installer.sh ~/.cache/dein && \
     yarn global add neovim && \
-    nvim; \apk --update add tzdata && \
+    nvim; \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     apk del tzdata && \
     rm -rf /var/cache/apk/* ;\
